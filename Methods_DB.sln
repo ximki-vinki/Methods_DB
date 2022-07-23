@@ -5,6 +5,10 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Methods_DB", "Methods_DB\Methods_DB.csproj", "{1D6307DF-A802-4229-ACC2-8F05BADBB03E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{E77FEDF0-C450-4AA6-90AA-835F77619098}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Methods_DB_Console", "Methods_DB_Console\Methods_DB_Console.csproj", "{E2A8623A-DFC7-49F6-9A28-2921F87BBB08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{1D6307DF-A802-4229-ACC2-8F05BADBB03E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D6307DF-A802-4229-ACC2-8F05BADBB03E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D6307DF-A802-4229-ACC2-8F05BADBB03E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A8623A-DFC7-49F6-9A28-2921F87BBB08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A8623A-DFC7-49F6-9A28-2921F87BBB08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A8623A-DFC7-49F6-9A28-2921F87BBB08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A8623A-DFC7-49F6-9A28-2921F87BBB08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E2A8623A-DFC7-49F6-9A28-2921F87BBB08} = {E77FEDF0-C450-4AA6-90AA-835F77619098}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27BF8EC9-1B04-4335-B3EB-76329E69583D}
