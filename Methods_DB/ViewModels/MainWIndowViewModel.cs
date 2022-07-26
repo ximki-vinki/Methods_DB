@@ -1,8 +1,7 @@
-﻿using Methods_DB.ViewModels.Base;
-using System;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
-using System.Text;
+﻿using Methods_DB.Infrastructures.Commands;
+using Methods_DB.ViewModels.Base;
+using System.Windows;
+using System.Windows.Input;
 
 namespace Methods_DB.ViewModels
 {
@@ -18,6 +17,7 @@ namespace Methods_DB.ViewModels
             set => Set(ref _Title, value);
         }
         #endregion
+
         #region Status : string Статус программы
         /// <summary> Статус программы </summary>
         private string _Status = "Готово";
@@ -29,5 +29,27 @@ namespace Methods_DB.ViewModels
             set => Set(ref _Status, value);
         }
         #endregion
+
+        #region Команды
+
+        #region CloseAppCommand
+        public ICommand CloseAppCommand { get; }
+
+        private bool CanCloseAppCommandExecuted(object p) => true;
+
+        private void OnCloseAppCommandExecuted(object p)
+        {
+            Application.Current.Shutdown();
+        }
+        #endregion
+
+        #endregion
+
+        public MainWIndowViewModel()
+        {
+            #region Команды
+            CloseAppCommand = new LambdaCommand(OnCloseAppCommandExecuted, CanCloseAppCommandExecuted);
+            #endregion
+        }
     }
 }
