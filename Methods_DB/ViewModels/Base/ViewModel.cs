@@ -20,10 +20,10 @@ namespace Methods_DB.ViewModels.Base
             OnPropertyChanged(PropertyName);
             return true;
         }
-        ~ViewModel()
-        {
-            Dispose(false);
-        }
+        //~ViewModel()
+        //{
+        //   Dispose(false);
+        //}
 
         public void Dispose()
         {
