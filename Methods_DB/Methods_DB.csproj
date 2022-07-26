@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="7.1.2" />
+    <PackageReference Include="FontAwesome5" Version="2.1.11" />
   </ItemGroup>
 
 </Project>
