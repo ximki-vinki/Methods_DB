@@ -8,14 +8,14 @@ namespace Methods_DB.Models
     {
         public string NameGTO { get; set; }
 
-        public IEnumerable<TypeObject> CountTypeObjects { get; set; }
+        public ICollection<TypeObject> CountTypeObjects { get; set; }
     }
     /// <summary> Объект исследования :Вода сточная </summary>
     internal class TypeObject : GlobalTypeObject
     {
         public string NameTypeObject { get; set; }
 
-        public IEnumerable<SubTypeObject> CountSybTypeObjects { get; set; }
+        public ICollection<SubTypeObject> CountSybTypeObjects { get; set; }
     }
     /// <summary>Суб объект исследования :Вода сточная очищенная</summary>
     internal class SubTypeObject : TypeObject
@@ -26,6 +26,6 @@ namespace Methods_DB.Models
     {
         public string FullNameObject { get; set; }
 
-        public IEnumerable<SubTypeObject> IncludSybTypeObjects { get; set; }
+        public ICollection<SubTypeObject> IncludSybTypeObjects { get; set; }
     }
 }

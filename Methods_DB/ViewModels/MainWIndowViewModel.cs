@@ -50,6 +50,9 @@ namespace Methods_DB.ViewModels
             #region Команды
             CloseAppCommand = new LambdaCommand(OnCloseAppCommandExecuted, CanCloseAppCommandExecuted);
             #endregion
+
+
+
         }
     }
 }

@@ -9,9 +9,9 @@ namespace Methods_DB.Models
 
         SubRanges LastRange { get; set; }
 
-        public IEnumerable<SubTypeObject> CountSybTypeObjectsInRange { get; set; }
+        public ICollection<SubTypeObject> CountSybTypeObjectsInRange { get; set; }
 
-        public IEnumerable<ParametrSynonyms> CountParSynInRange { get; set; }
+        public ICollection<ParametrSynonyms> CountParSynInRange { get; set; }
     }
     internal struct SubRanges
     {
@@ -21,7 +21,7 @@ namespace Methods_DB.Models
 
         public int СoeffSubRange { get; set; }
 
-        public IEnumerable<UnitOfMeasurement> SubRangeUoM { get; set; }
+        public ICollection<UnitOfMeasurement> SubRangeUoM { get; set; }
     }
     /// <summary>Еденица измерений</summary>
     internal struct UnitOfMeasurement

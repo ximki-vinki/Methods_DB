@@ -6,7 +6,7 @@ namespace Methods_DB.Models
     {
         public string NameTypePar { get; set; }
 
-        public IEnumerable<ParametrSynonyms> CountParSyn { get; set; }
+        public ICollection<ParametrSynonyms> CountParSyn { get; set; }
 
     }
     internal class ParametrSynonyms : Type_Parametr

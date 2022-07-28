@@ -7,9 +7,9 @@ namespace Methods_DB.Models
     {
         public string NameMethod { get; set; }
 
-        public IEnumerable<Range> Ranges { get; set; }
+        public ICollection<Range> Ranges { get; set; }
 
-        public IEnumerable<ObjectMethod> ObjectsMethod { get; set; }
+        public ICollection<ObjectMethod> ObjectsMethod { get; set; }
 
         ItemDocument MethodDoc { get; set; }
             }
