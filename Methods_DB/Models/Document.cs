@@ -2,7 +2,6 @@
 
 namespace Methods_DB.Models
 {
-    #region Документ
     /// <summary>Тип документа:ГОСТ</summary>
     internal class TypeDocument
     {
@@ -11,8 +10,11 @@ namespace Methods_DB.Models
     internal class Document : TypeDocument
     {
         public string NumberDoc { get; set; }
+
         YearInDoc YearInNameDoc { get; set; }
+
         public DateTime ImplementationDate { get; set; }
+
         public bool IsDocumentCurrent { get; set; }
     }
     internal class ItemDocument : Document
@@ -23,7 +25,8 @@ namespace Methods_DB.Models
     public struct YearInDoc
     {
         public DateTime DateAsYear { get; set; }
+
         public bool YearIsFull { get; set; }
     }
-    #endregion
+
 }

@@ -2,17 +2,19 @@
 
 namespace Methods_DB.Models
 {
-    
+
     /// <summary>Глобальный обЪект исследования :Вода</summary>
     internal class GlobalTypeObject
     {
         public string NameGTO { get; set; }
+
         public IEnumerable<TypeObject> CountTypeObjects { get; set; }
     }
     /// <summary> Объект исследования :Вода сточная </summary>
     internal class TypeObject : GlobalTypeObject
     {
         public string NameTypeObject { get; set; }
+
         public IEnumerable<SubTypeObject> CountSybTypeObjects { get; set; }
     }
     /// <summary>Суб объект исследования :Вода сточная очищенная</summary>
@@ -23,7 +25,7 @@ namespace Methods_DB.Models
     internal struct ObjectMethod
     {
         public string FullNameObject { get; set; }
+
         public IEnumerable<SubTypeObject> IncludSybTypeObjects { get; set; }
     }
-    
 }
