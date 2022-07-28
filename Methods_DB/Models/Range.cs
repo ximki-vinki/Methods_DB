@@ -8,7 +8,7 @@ namespace Methods_DB.Models
         SubRanges FirstRange { get; set; }
         SubRanges LastRange { get; set; }
         public IEnumerable<SubTypeObject> CountSybTypeObjectsInRange { get; set; }
-        public IEnumerable<ParametrsSynonyms> CountParSynInRange { get; set; }
+        public IEnumerable<ParametrSynonyms> CountParSynInRange { get; set; }
     }
     internal struct SubRanges
     {
