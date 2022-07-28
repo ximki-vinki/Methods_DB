@@ -21,7 +21,8 @@ namespace Methods_DB.Models
     {
         SubRanges FirstRange { get; set; }
         SubRanges LastRange { get; set; }
-        public IEnumerable<SybTypeObject> IncludSybTypeObjects { get; set; }
+        public IEnumerable<SybTypeObject> CountSybTypeObjectsInRange { get; set; }
+        public IEnumerable<ParametrsSynonyms> CountParSynInRange { get; set; }
 
     }
     /// <summary>Один из диапазонов методики</summary>
@@ -85,9 +86,21 @@ namespace Methods_DB.Models
     {
         public DateTime DateAsYear { get; set; }
         public bool YearIsFull { get; set; }
-    } 
+    }
     #endregion
 
+    #region Показатель анализа
+    internal class Type_Parametrs
+    {
+        public string NameTypePar { get; set; }
+        public IEnumerable<ParametrsSynonyms> CountParSyn { get; set; }
+
+    }
+    internal class ParametrsSynonyms : Type_Parametrs
+    {
+        public string NameParSyn { get; set; }
+    } 
+    #endregion
 
 
 
