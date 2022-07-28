@@ -9,8 +9,9 @@ namespace Methods_DB.Models
     internal class Method
     {
         public string NameMethod { get; set; }
-        public IEnumerable<Range> Rangfes { get; set; }
-
+        public IEnumerable<Range> Ranges { get; set; }
+        public IEnumerable<ObjectMethod> ObjectsMethod { get; set; }
+        ItemDocument MethodDoc { get; set; }
 
     }
 
@@ -20,6 +21,8 @@ namespace Methods_DB.Models
     {
         SubRanges FirstRange { get; set; }
         SubRanges LastRange { get; set; }
+        public IEnumerable<SybTypeObject> IncludSybTypeObjects { get; set; }
+
     }
     /// <summary>Один из диапазонов методики</summary>
     internal struct SubRanges
@@ -54,11 +57,38 @@ namespace Methods_DB.Models
     {
 
     }
-    internal struct Object
+    internal struct ObjectMethod
     {
         public string FullNameObject { get; set; }
         public IEnumerable<SybTypeObject> IncludSybTypeObjects { get; set; }
+    }
+    #endregion
+    #region Документ
+    /// <summary>Тип документа:ГОСТ</summary>
+    internal class TypeDocument
+    {
+        public string NameTypeDocument { get; set; }
+    }
+    internal class Document : TypeDocument
+    {
+        public string NumberDoc { get; set; }
+        YearInDoc YearInNameDoc { get; set; }
+        public DateTime ImplementationDate { get; set; }
+        public bool IsDocumentCurrent { get; set; }
+    }
+    internal class ItemDocument : Document
+    {
+        public string NumberItemDoc { get; set; }
+    }
+    /// <summary>Дата в названии документа 99 или 1999</summary>
+    public struct YearInDoc
+    {
+        public DateTime DateAsYear { get; set; }
+        public bool YearIsFull { get; set; }
     } 
     #endregion
+
+
+
 
 }
