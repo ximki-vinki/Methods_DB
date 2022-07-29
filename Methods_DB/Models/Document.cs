@@ -5,7 +5,7 @@ namespace Methods_DB.Models
     /// <summary>Тип документа:ГОСТ</summary>
     internal class TypeDocument
     {
-        public string NameTypeDocument { get; set; }
+        public string Name { get; set; }
     }
     internal class Document : TypeDocument
     {
