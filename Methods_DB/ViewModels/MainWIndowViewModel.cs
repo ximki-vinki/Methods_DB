@@ -1,5 +1,8 @@
 ﻿using Methods_DB.Infrastructures.Commands;
+using Methods_DB.Models;
 using Methods_DB.ViewModels.Base;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 
@@ -7,6 +10,9 @@ namespace Methods_DB.ViewModels
 {
     internal class MainWIndowViewModel : ViewModel
     {
+        public ObservableCollection<CountStandartItems> StandartItems { get; }
+
+
         #region Title : String Заголовок окна
         /// <summary>Заголовок окна</summary>
         private string _Title = "Заполнение базы данных методик";
@@ -51,6 +57,23 @@ namespace Methods_DB.ViewModels
             CloseAppCommand = new LambdaCommand(OnCloseAppCommandExecuted, CanCloseAppCommandExecuted);
             #endregion
 
+            int index_item = 1;
+            var standartItem = Enumerable.Range(1, 10).Select(i => new StandartItem
+            {
+                Name1 = $"Name1{index_item++}",
+                Name2 = $"Name2{index_item++}",
+                Name3 = $"Name3{index_item++}"
+            });
+            var standartItems = Enumerable.Range(1, 10).Select(i => new CountStandartItems
+            {
+                Name = $"Спискок {i}",
+                Counts = new ObservableCollection<StandartItem>(standartItem)
+            }
+
+                );
+
+
+            StandartItems = new ObservableCollection<CountStandartItems>(standartItems);
 
 
         }
